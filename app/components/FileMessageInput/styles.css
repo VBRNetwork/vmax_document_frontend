@@ -1,0 +1,88 @@
+.inputContainer {
+  box-sizing: border-box;
+  flex-grow: 1;
+  background-color: #c6e3fa;
+  font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+  outline: 0;
+  border-top: 0 none;
+  border-right: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.87);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-size: 0.94em;
+  margin: 0.3rem;
+  border-radius: 0.7em;
+  padding: 0.3em;
+}
+
+.inputContainer::before {
+  box-sizing: border-box;
+  content: attr(data-placeholder);
+  color: rgba(0, 0, 0, 0.38);
+  display: block;
+  cursor: text;
+}
+
+.inputContainer .files {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  /* justify-items: start; */
+}
+
+.inputContainer .files .file {
+  padding: 0.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  color: rgba(0, 0, 0, 0.87);
+  background: #83c6fd;
+  border-radius: 0.7em;
+  width: max-content;
+  margin-right: 0.5rem;
+}
+
+.inputContainer .files .file .name {
+  font-weight: 800;
+  font-size: 1rem;
+  margin: auto 0.3rem;
+}
+
+.inputContainer .files .file .content {
+  display: flex;
+  flex-flow: row;
+  padding: 1rem;
+}
+
+.inputContainer .files .file .content:hover i {
+  background-color: rgba(255, 255, 255, 0.623);
+}
+
+.inputContainer .files .file .content > i {
+  font-size: 1.8rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.253);
+  border-radius: 50%;
+}
+
+.inputContainer .files .file .trash {
+  font-size: 0.8rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.253);
+  border-radius: 50%;
+}
+
+.inputContainer .files .file .trash:hover {
+  background-color: rgba(255, 255, 255, 0.623);
+}
+
+.inputContainer .files .file .content > i:hover {
+  background-color: rgba(255, 255, 255, 0.623);
+}

@@ -1,0 +1,15 @@
+.login-page-btn {
+    width: 150px !important;
+    height: 50px !important;
+    padding: 1.19rem !important;
+    border-radius: 10px !important;
+    background-color: #FFF !important;
+    border: solid 1px rgb(31, 154, 183) !important;
+    color: rgb(31, 154, 183) !important;
+    margin-top: 5% !important;
+}
+
+.login-page-btn:hover {
+    background-color: rgb(31, 154, 183) !important;
+    color: #FFF !important;
+}
