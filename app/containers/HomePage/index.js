@@ -360,7 +360,7 @@ export function HomePage({
       open={showDocument === document.document_id}
       onClose={() => setShowDocument(-1)}
       onOpen={() => setShowDocument(document.document_id)}
-      style={{ marginLeft: '35rem', }}
+      style={{ marginLeft: '35rem' }}
       trigger={
         <Button
           variant="outlined"
@@ -371,14 +371,16 @@ export function HomePage({
             fontSize: '1.2rem',
             border: '1px solid rgb(29, 114, 106)',
             borderRadius: '20px',
-            
           }}
         >
           {document.document_name}
         </Button>
       }
     >
-      <Modal.Content style={{ background: 'rgb(1, 8, 28)',  maxHeight: 'none' }} scrolling>
+      <Modal.Content
+        style={{ background: 'rgb(1, 8, 28)', maxHeight: 'none' }}
+        scrolling
+      >
         <Button
           style={{
             marginLeft: '55rem',
@@ -482,17 +484,17 @@ export function HomePage({
             style={
               documents.results.length < 6
                 ? {
-                    height: '80vh',
-                    marginTop: '7rem',
-                    background: 'rgb(1, 8, 28)',
-                    minHeight: '80vh',
-                }
+                  height: '80vh',
+                  marginTop: '7rem',
+                  background: 'rgb(1, 8, 28)',
+                  minHeight: '80vh',
+                  }
                 : {
-                    marginTop: '7rem',
-                    background: 'rgb(1, 8, 28)',
-                    marginBottom: '2rem',
-                    minHeight: '80vh',
-                }
+                  marginTop: '7rem',
+                  background: 'rgb(1, 8, 28)',
+                  marginBottom: '2rem',
+                  minHeight: '80vh',
+                  }
             }
           >
             <Typography

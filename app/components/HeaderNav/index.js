@@ -14,6 +14,8 @@ import {
   Segment,
   Header,
 } from 'semantic-ui-react';
+import { Avatar, Stack } from '@mui/material';
+import { deepOrange } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 import Logo from '../../images/vbrlabs_logo.png';
 import { makeSelectUser } from '../../containers/App/user/selectors';
@@ -102,18 +104,22 @@ function HeaderNav({ children, match, user, logoutUserPage }) {
                   inline
                   style={{ color: '#FFF' }}
                   trigger={
-                    <span style={{ color: '#FFF' }}>
-                      <Image
-                        avatar
-                        style={{ width: '60px', height: 'auto' }}
-                        src={
-                          user.user.avatar
-                            ? user.user.avatar
-                            : StandardUserImage
-                        }
-                      />{' '}
-                      Hello {user.user.first_name}!
-                    </span>
+                    <>
+                      <Stack direction="row" spacing={2}>
+                        <Avatar
+                          alt={`${user.user.first_name} ${user.user.last_name}`}
+                          src={user.user.avatar}
+                          sx={{
+                            width: 66,
+                            height: 66,
+                            bgcolor: deepOrange[500],
+                          }}
+                        />{' '}
+                        <span style={{ color: '#FFF', marginTop: '1.5rem' }}>
+                          Hello {user.user.first_name}!
+                        </span>
+                      </Stack>
+                    </>
                   }
                   options={options}
                   icon={null}
