@@ -76,7 +76,7 @@ export function* refreshUser() {
   const utc = dateNow.getTime() + dateNow.getTimezoneOffset() * 60000;
   const time = utc + 3600000 * 3;
 
-  if (!token && process.env.NODE_ENV !== 'test') return;
+  if (!token) return;
 
   try {
     const response = yield call(request, requestURL, headers, 'post', body);

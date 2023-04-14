@@ -17,5 +17,5 @@ export default function request(url, options, method, data) {
     data,
     headers: options,
     withCredentials: true,
-  })
+  });
 }
