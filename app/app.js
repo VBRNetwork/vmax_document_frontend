@@ -71,7 +71,7 @@ class Preloader extends React.Component {
       {
         storage: localForage,
         whitelist: ['user'],
-        transforms: [encryptor],
+        // transforms: [encryptor],
       },
       () => {
         this.setState({ rehydrated: true });
