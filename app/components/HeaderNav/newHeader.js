@@ -257,14 +257,6 @@ const HeaderNavNew = ({ children, logoutUserPage, currentUser, match }) => {
   };
   const options = [
     {
-      key: 'user',
-      text: 'Dashboard',
-      icon: 'dashboard',
-      as: Link,
-      to: '/dashboard',
-      color: 'black',
-    },
-    {
       key: 'sign-out',
       text: 'Sign Out',
       icon: 'sign out',

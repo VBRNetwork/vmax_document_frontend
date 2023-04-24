@@ -23,27 +23,11 @@ import { logoutUser } from '../../containers/App/user/actions';
 import StandardUserImage from '../../images/sample-avatar.jpg';
 import './header.css';
 
-const countryOptions = [
-  { key: 'us', value: 'us', flag: 'us', text: 'English' },
-  { key: 'fr', value: 'fr', flag: 'fr', text: 'French' },
-  { key: 'de', vdeue: 'de', flag: 'de', text: 'Deutsch' },
-  { key: 'es', value: 'es', flag: 'es', text: 'Spanish' },
-  { key: 'be', value: 'be', flag: 'be', text: 'Belgium' },
-];
-
 function HeaderNav({ children, match, user, logoutUserPage }) {
   const handleLogOut = () => {
     logoutUserPage();
   };
   const options = [
-    {
-      key: 'user',
-      text: 'Dashboard',
-      icon: 'dashboard',
-      as: Link,
-      to: '/dashboard',
-      color: 'black',
-    },
     {
       key: 'sign-out',
       text: 'Sign Out',
